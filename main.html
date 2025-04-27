@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=600, initial-scale=1.0">
+    <title>Fragmented Squares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Fragmented Squares</h1>
+
+    <div id="game-container">
+        <div id="info-panel">
+            <span id="player-turn">Turn: Left (Blue)</span>
+            <span id="active-squares">Active Squares: 0</span>
+            <span id="winner-display"></span>
+        </div>
+
+        <svg id="game-svg" viewbox="0 0 600 600"></svg>
+
+        <div id="controls">
+            <button id="play-again-button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
