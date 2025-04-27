@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#info-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+#info-panel span {
+    margin: 5px 10px;
+}
+
+#player-turn.left { color: blue; font-weight: bold; }
+#player-turn.right { color: red; font-weight: bold; }
+#winner-display.left { color: blue; font-weight: bold; }
+#winner-display.right { color: red; font-weight: bold; }
+#winner-display.game-over { color: green; font-weight: bold; }
+
+#game-svg {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    width: 600px;
+    height: 600px;
+}
+
+.square-shape {
+    fill: #e8f0fe;
+    stroke: #d0d0d0;
+    stroke-width: 0.5;
+}
+.square-shape.destroyed {
+    fill: #f5f5f5;
+}
+
+.edge-line {
+    stroke-width: 5;
+    cursor: pointer;
+    transition: stroke-width 0.1s ease-in-out;
+}
+.edge-line.red { stroke: red; }
+.edge-line.blue { stroke: blue; }
+
+.edge-line.highlight {
+    stroke: limegreen;
+    stroke-width: 9;
+}
+
+.edge-line.removed {
+    stroke: transparent;
+    pointer-events: none;
+}
+
+#controls {
+    margin-top: 15px;
+}
+#play-again-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    display: none;
+}
+#play-again-button:hover {
+    background-color: #45a049;
+}
